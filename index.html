@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoieb Durjoy - Digital Business Card</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f8faff 0%, #e8f4ff 50%, #f0e8ff 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        /* Animated background elements */
+        body::before {
+            content: '';
+            position: fixed;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(14, 165, 233, 0.08) 0%, transparent 70%);
+            animation: float 15s ease-in-out infinite;
+            z-index: -1;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            bottom: -50%;
+            left: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(8, 145, 178, 0.08) 0%, transparent 70%);
+            animation: float 20s ease-in-out infinite reverse;
+            z-index: -1;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translate(0, 0);
+            }
+            50% {
+                transform: translate(30px, 30px);
+            }
+        }
+
+        .container {
+            width: 100%;
+            max-width: 420px;
+            z-index: 10;
+        }
+
+        /* Main Card */
+        .card {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.95);
+            border-radius: 30px;
+            padding: 40px 30px;
+            box-shadow: 0 8px 32px 0 rgba(14, 165, 233, 0.15);
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+            animation: slideIn 0.8s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(14, 165, 233, 0.5);
+            box-shadow: 0 15px 35px 0 rgba(14, 165, 233, 0.25);
+        }
+
+        /* Profile Image */
+        .profile-image-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 60px;
+            box-shadow: 0 8px 25px rgba(14, 165, 233, 0.35);
+            position: relative;
+            animation: glow 3s ease-in-out infinite;
+            object-fit: cover;
+            border: 3px solid rgba(14, 165, 233, 0.2);
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                box-shadow: 0 8px 25px rgba(14, 165, 233, 0.35);
+            }
+            50% {
+                box-shadow: 0 8px 35px rgba(14, 165, 233, 0.55);
+            }
+        }
+
+        /* Name */
+        .name {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1a365d;
+            text-align: center;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+            font-family: 'Sora', sans-serif;
+        }
+
+        /* Subtitle */
+        .subtitle {
+            font-size: 14px;
+            color: #5a7a96;
+            text-align: center;
+            margin-bottom: 30px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Divider */
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(14, 165, 233, 0.2), transparent);
+            margin: 25px 0;
+        }
+
+        /* bKash Section */
+        .bkash-section {
+            background: linear-gradient(135deg, rgba(14, 165, 233, 0.1) 0%, rgba(8, 145, 178, 0.1) 100%);
+            border: 1.5px solid rgba(14, 165, 233, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .bkash-section:hover {
+            background: linear-gradient(135deg, rgba(14, 165, 233, 0.2) 0%, rgba(8, 145, 178, 0.2) 100%);
+            border-color: rgba(14, 165, 233, 0.6);
+            box-shadow: 0 6px 20px rgba(14, 165, 233, 0.2);
+        }
+
+        .bkash-label {
+            font-size: 12px;
+            color: #5a7a96;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .bkash-number {
+            font-size: 22px;
+            font-weight: 700;
+            color: #1a365d;
+            font-family: 'Sora', sans-serif;
+            letter-spacing: 1px;
+        }
+
+        /* Social Buttons */
+        .social-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .social-btn {
+            width: 100%;
+            aspect-ratio: 1;
+            border: none;
+            border-radius: 20px;
+            background: linear-gradient(135deg, rgba(14, 165, 233, 0.15), rgba(8, 145, 178, 0.15));
+            border: 1.5px solid rgba(14, 165, 233, 0.3);
+            color: #1a365d;
+            font-size: 22px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(14, 165, 233, 0.3), rgba(8, 145, 178, 0.3));
+            transition: left 0.4s ease;
+            z-index: -1;
+        }
+
+        .social-btn:hover {
+            transform: translateY(-8px) scale(1.05);
+            border-color: rgba(14, 165, 233, 0.6);
+            color: #0369a1;
+            box-shadow: 0 12px 30px rgba(14, 165, 233, 0.3);
+        }
+
+        .social-btn:hover::before {
+            left: 0;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            width: 100%;
+            padding: 16px 24px;
+            border: none;
+            border-radius: 20px;
+            background: linear-gradient(135deg, #0ea5e9 0%, #0891b2 100%);
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(14, 165, 233, 0.4);
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #0891b2 0%, #0ea5e9 100%);
+            transition: left 0.4s ease;
+            z-index: -1;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 35px rgba(14, 165, 233, 0.5);
+        }
+
+        .cta-button:hover::before {
+            left: 0;
+        }
+
+        .cta-button:active {
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 12px;
+            color: #a0aec0;
+        }
+
+        .footer a {
+            color: #0891b2;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: #0ea5e9;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 480px) {
+            .card {
+                padding: 30px 20px;
+                border-radius: 25px;
+            }
+
+            .name {
+                font-size: 24px;
+            }
+
+            .profile-image {
+                width: 100px;
+                height: 100px;
+                font-size: 50px;
+            }
+
+            .social-buttons {
+                gap: 10px;
+                grid-template-columns: repeat(auto-fit, minmax(55px, 1fr));
+            }
+
+            .social-btn {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .card {
+                padding: 25px 15px;
+            }
+
+            .name {
+                font-size: 22px;
+            }
+
+            .subtitle {
+                font-size: 13px;
+            }
+
+            .social-btn {
+                font-size: 16px;
+            }
+
+            .cta-button {
+                padding: 14px 20px;
+                font-size: 12px;
+            }
+
+            .bkash-number {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <!-- Profile Image -->
+            <div class="profile-image-container">
+                <img src="profile.jpg" alt="Shoieb Durjoy" class="profile-image">
+            </div>
+
+            <!-- Name -->
+            <h1 class="name">Shoieb Durjoy</h1>
+
+            <!-- Subtitle -->
+            <p class="subtitle">Code • Edit • Create</p>
+
+            <!-- Divider -->
+            <div class="divider"></div>
+
+            <!-- bKash Section -->
+            <div class="bkash-section">
+                <span class="bkash-label">💳 bKash Mobile Money</span>
+                <div class="bkash-number">01719284739</div>
+            </div>
+
+            <!-- Social Buttons -->
+            <div class="social-buttons">
+                <button class="social-btn" title="WhatsApp" onclick="openLink('https://wa.me/+8801719284739')">
+                    <i class="fab fa-whatsapp"></i>
+                </button>
+                <button class="social-btn" title="Instagram" onclick="openLink('https://instagram.com')">
+                    <i class="fab fa-instagram"></i>
+                </button>
+                <button class="social-btn" title="Snapchat" onclick="openLink('https://snapchat.com')">
+                    <i class="fab fa-snapchat"></i>
+                </button>
+                <button class="social-btn" title="Facebook" onclick="openLink('https://facebook.com')">
+                    <i class="fab fa-facebook"></i>
+                </button>
+                <button class="social-btn" title="Behance Portfolio" onclick="openLink('https://behance.net')">
+                    <i class="fab fa-behance"></i>
+                </button>
+                <button class="social-btn" title="Email" onclick="openLink('mailto:shoiebdurjoy9@gmail.com')">
+                    <i class="fas fa-envelope"></i>
+                </button>
+                <button class="social-btn" title="Call" onclick="openLink('tel:01560039923')">
+                    <i class="fas fa-phone"></i>
+                </button>
+                <button class="social-btn" title="GitHub" onclick="openLink('https://github.com/shoiebdurjoy')">
+                    <i class="fab fa-github"></i>
+                </button>
+            </div>
+
+            <!-- Divider -->
+            <div class="divider"></div>
+
+            <!-- CTA Button -->
+            <button class="cta-button" onclick="copyToClipboard('01719284739')">
+                📋 Copy bKash Number
+            </button>
+
+            <!-- Footer -->
+            <div class="footer"></div>
+        </div>
+    </div>
+
+    <script>
+        function openLink(url) {
+            window.open(url, '_blank');
+        }
+
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = event.target;
+                const originalText = btn.textContent;
+                btn.textContent = '✓ Copied!';
+                btn.style.background = 'linear-gradient(135deg, #4CAF50 0%, #45a049 100%)';
+                
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.style.background = '';
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy:', err);
+            });
+        }
+
+        // Add ripple effect on button click
+        document.querySelectorAll('.social-btn, .cta-button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                if (this.classList.contains('cta-button') || this.getAttribute('onclick').includes('openLink')) {
+                    const rect = this.getBoundingClientRect();
+                    const size = Math.max(rect.width, rect.height);
+                    const x = e.clientX - rect.left - size / 2;
+                    const y = e.clientY - rect.top - size / 2;
+                    
+                    const ripple = document.createElement('span');
+                    ripple.style.width = ripple.style.height = size + 'px';
+                    ripple.style.left = x + 'px';
+                    ripple.style.top = y + 'px';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
