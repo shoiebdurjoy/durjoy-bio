@@ -16,7 +16,7 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #f8faff 0%, #e8f4ff 50%, #f0e8ff 100%);
+            background: linear-gradient(135deg, #0f0f13 0%, #1a1a22 100%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -33,7 +33,7 @@
             right: -50%;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle, rgba(14, 165, 233, 0.08) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.08) 0%, transparent 70%);
             animation: float 15s ease-in-out infinite;
             z-index: -1;
         }
@@ -45,7 +45,7 @@
             left: -50%;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle, rgba(8, 145, 178, 0.08) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.08) 0%, transparent 70%);
             animation: float 20s ease-in-out infinite reverse;
             z-index: -1;
         }
@@ -67,13 +67,13 @@
 
         /* Main Card */
         .card {
-            background: rgba(255, 255, 255, 0.75);
+            background: rgba(30, 30, 40, 0.75);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.95);
+            border: 1px solid rgba(139, 92, 246, 0.2);
             border-radius: 30px;
             padding: 40px 30px;
-            box-shadow: 0 8px 32px 0 rgba(14, 165, 233, 0.15);
+            box-shadow: 0 8px 32px 0 rgba(139, 92, 246, 0.15);
             transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
             animation: slideIn 0.8s ease-out;
         }
@@ -91,8 +91,8 @@
 
         .card:hover {
             transform: translateY(-10px);
-            border-color: rgba(14, 165, 233, 0.5);
-            box-shadow: 0 15px 35px 0 rgba(14, 165, 233, 0.25);
+            border-color: rgba(139, 92, 246, 0.4);
+            box-shadow: 0 15px 35px 0 rgba(139, 92, 246, 0.25);
         }
 
         /* Profile Image */
@@ -110,19 +110,19 @@
             justify-content: center;
             margin: 0 auto 20px;
             font-size: 60px;
-            box-shadow: 0 8px 25px rgba(14, 165, 233, 0.35);
+            box-shadow: 0 8px 25px rgba(139, 92, 246, 0.35);
             position: relative;
             animation: glow 3s ease-in-out infinite;
             object-fit: cover;
-            border: 3px solid rgba(14, 165, 233, 0.2);
+            border: 3px solid rgba(139, 92, 246, 0.3);
         }
 
         @keyframes glow {
             0%, 100% {
-                box-shadow: 0 8px 25px rgba(14, 165, 233, 0.35);
+                box-shadow: 0 8px 25px rgba(139, 92, 246, 0.35);
             }
             50% {
-                box-shadow: 0 8px 35px rgba(14, 165, 233, 0.55);
+                box-shadow: 0 8px 35px rgba(139, 92, 246, 0.55);
             }
         }
 
@@ -130,7 +130,7 @@
         .name {
             font-size: 28px;
             font-weight: 700;
-            color: #1a365d;
+            color: #ffffff;
             text-align: center;
             margin-bottom: 8px;
             letter-spacing: -0.5px;
@@ -140,7 +140,7 @@
         /* Subtitle */
         .subtitle {
             font-size: 14px;
-            color: #5a7a96;
+            color: #a1a1aa;
             text-align: center;
             margin-bottom: 30px;
             letter-spacing: 0.5px;
@@ -149,14 +149,14 @@
         /* Divider */
         .divider {
             height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(14, 165, 233, 0.2), transparent);
+            background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.2), transparent);
             margin: 25px 0;
         }
 
         /* bKash Section */
         .bkash-section {
-            background: linear-gradient(135deg, rgba(14, 165, 233, 0.1) 0%, rgba(8, 145, 178, 0.1) 100%);
-            border: 1.5px solid rgba(14, 165, 233, 0.3);
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(99, 102, 241, 0.1) 100%);
+            border: 1.5px solid rgba(139, 92, 246, 0.3);
             border-radius: 15px;
             padding: 20px;
             margin-bottom: 25px;
@@ -165,14 +165,14 @@
         }
 
         .bkash-section:hover {
-            background: linear-gradient(135deg, rgba(14, 165, 233, 0.2) 0%, rgba(8, 145, 178, 0.2) 100%);
-            border-color: rgba(14, 165, 233, 0.6);
-            box-shadow: 0 6px 20px rgba(14, 165, 233, 0.2);
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(99, 102, 241, 0.2) 100%);
+            border-color: rgba(139, 92, 246, 0.6);
+            box-shadow: 0 6px 20px rgba(139, 92, 246, 0.2);
         }
 
         .bkash-label {
             font-size: 12px;
-            color: #5a7a96;
+            color: #a1a1aa;
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-bottom: 8px;
@@ -182,7 +182,7 @@
         .bkash-number {
             font-size: 22px;
             font-weight: 700;
-            color: #1a365d;
+            color: #ffffff;
             font-family: 'Sora', sans-serif;
             letter-spacing: 1px;
         }
@@ -200,9 +200,9 @@
             aspect-ratio: 1;
             border: none;
             border-radius: 20px;
-            background: linear-gradient(135deg, rgba(14, 165, 233, 0.15), rgba(8, 145, 178, 0.15));
-            border: 1.5px solid rgba(14, 165, 233, 0.3);
-            color: #1a365d;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.2));
+            border: 1.5px solid rgba(139, 92, 246, 0.3);
+            color: #ffffff;
             font-size: 22px;
             cursor: pointer;
             transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
@@ -211,6 +211,7 @@
             justify-content: center;
             position: relative;
             overflow: hidden;
+            text-decoration: none;
         }
 
         .social-btn::before {
@@ -220,16 +221,16 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(14, 165, 233, 0.3), rgba(8, 145, 178, 0.3));
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.4), rgba(99, 102, 241, 0.4));
             transition: left 0.4s ease;
             z-index: -1;
         }
 
         .social-btn:hover {
             transform: translateY(-8px) scale(1.05);
-            border-color: rgba(14, 165, 233, 0.6);
-            color: #0369a1;
-            box-shadow: 0 12px 30px rgba(14, 165, 233, 0.3);
+            border-color: rgba(139, 92, 246, 0.6);
+            color: #8B5CF6;
+            box-shadow: 0 12px 30px rgba(139, 92, 246, 0.3);
         }
 
         .social-btn:hover::before {
@@ -242,7 +243,7 @@
             padding: 16px 24px;
             border: none;
             border-radius: 20px;
-            background: linear-gradient(135deg, #0ea5e9 0%, #0891b2 100%);
+            background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
             color: #ffffff;
             font-size: 14px;
             font-weight: 600;
@@ -252,7 +253,7 @@
             letter-spacing: 1px;
             position: relative;
             overflow: hidden;
-            box-shadow: 0 6px 20px rgba(14, 165, 233, 0.4);
+            box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
         }
 
         .cta-button::before {
@@ -262,14 +263,14 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, #0891b2 0%, #0ea5e9 100%);
+            background: linear-gradient(135deg, #8B5CF6 0%, #6366F1 100%);
             transition: left 0.4s ease;
             z-index: -1;
         }
 
         .cta-button:hover {
             transform: translateY(-4px);
-            box-shadow: 0 12px 35px rgba(14, 165, 233, 0.5);
+            box-shadow: 0 12px 35px rgba(139, 92, 246, 0.5);
         }
 
         .cta-button:hover::before {
@@ -285,17 +286,17 @@
             text-align: center;
             margin-top: 25px;
             font-size: 12px;
-            color: #a0aec0;
+            color: #a1a1aa;
         }
 
         .footer a {
-            color: #0891b2;
+            color: #8B5CF6;
             text-decoration: none;
             transition: color 0.3s ease;
         }
 
         .footer a:hover {
-            color: #0ea5e9;
+            color: #a78bfa;
         }
 
         /* Responsive Design */
@@ -378,33 +379,33 @@
 
             <!-- Social Buttons -->
             <div class="social-buttons">
-                <button class="social-btn" title="WhatsApp" onclick="openLink('https://wa.me/+8801719284739')">
+                <a class="social-btn" href="https://wa.me/+8801719284739" title="WhatsApp" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-whatsapp"></i>
-                </button>
-                <button class="social-btn" title="Instagram" onclick="openLink('https://instagram.com')">
+                </a>
+                <a class="social-btn" href="https://www.instagram.com/shoieb._.durjoy/" title="Instagram" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-instagram"></i>
-                </button>
-                <button class="social-btn" title="Snapchat" onclick="openLink('https://snapchat.com')">
+                </a>
+                <a class="social-btn" href="https://snapchat.com/add/shoieb_durjoy19" title="Snapchat" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-snapchat"></i>
-                </button>
-                <button class="social-btn" title="Facebook" onclick="openLink('https://facebook.com')">
+                </a>
+                <a class="social-btn" href="https://www.facebook.com/shoieb.durjoy/" title="Facebook" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-facebook"></i>
-                </button>
-                <button class="social-btn" title="Behance Portfolio" onclick="openLink('https://behance.net')">
+                </a>
+                <a class="social-btn" href="https://www.behance.net/shoiebdurjoy9" title="Behance Portfolio" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-behance"></i>
-                </button>
-                <button class="social-btn" title="Email" onclick="openLink('mailto:shoiebdurjoy9@gmail.com')">
+                </a>
+                <a class="social-btn" href="mailto:shoiebdurjoy9@gmail.com" title="Email">
                     <i class="fas fa-envelope"></i>
-                </button>
-                <button class="social-btn" title="Call" onclick="openLink('tel:01560039923')">
+                </a>
+                <a class="social-btn" href="tel:01560039923" title="Call">
                     <i class="fas fa-phone"></i>
-                </button>
-                <button class="social-btn" title="GitHub" onclick="openLink('https://github.com/shoiebdurjoy')">
+                </a>
+                <a class="social-btn" href="https://github.com/shoiebdurjoy" title="GitHub" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-github"></i>
-                </button>
-                <button class="social-btn" title="LinkedIn" onclick="openLink('https://www.linkedin.com/in/shoieb-durjoy-01a942234/')">
+                </a>
+                <a class="social-btn" href="https://www.linkedin.com/in/shoieb-durjoy-01a942234/" title="LinkedIn" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-linkedin"></i>
-                </button>
+                </a>
             </div>
 
             <!-- Divider -->
@@ -421,10 +422,6 @@
     </div>
 
     <script>
-        function openLink(url) {
-            window.open(url, '_blank');
-        }
-
         function copyToClipboard(text) {
             navigator.clipboard.writeText(text).then(() => {
                 const btn = event.target;
@@ -442,19 +439,17 @@
         }
 
         // Add ripple effect on button click
-        document.querySelectorAll('.social-btn, .cta-button').forEach(button => {
+        document.querySelectorAll('.cta-button').forEach(button => {
             button.addEventListener('click', function(e) {
-                if (this.classList.contains('cta-button') || this.getAttribute('onclick').includes('openLink')) {
-                    const rect = this.getBoundingClientRect();
-                    const size = Math.max(rect.width, rect.height);
-                    const x = e.clientX - rect.left - size / 2;
-                    const y = e.clientY - rect.top - size / 2;
-                    
-                    const ripple = document.createElement('span');
-                    ripple.style.width = ripple.style.height = size + 'px';
-                    ripple.style.left = x + 'px';
-                    ripple.style.top = y + 'px';
-                }
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+                
+                const ripple = document.createElement('span');
+                ripple.style.width = ripple.style.height = size + 'px';
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
             });
         });
     </script>
