@@ -16,7 +16,7 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #0f0f13 0%, #1a1a22 100%);
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -33,7 +33,7 @@
             right: -50%;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle, rgba(139, 92, 246, 0.08) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
             animation: float 15s ease-in-out infinite;
             z-index: -1;
         }
@@ -45,7 +45,7 @@
             left: -50%;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle, rgba(99, 102, 241, 0.08) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
             animation: float 20s ease-in-out infinite reverse;
             z-index: -1;
         }
@@ -67,13 +67,13 @@
 
         /* Main Card */
         .card {
-            background: rgba(30, 30, 40, 0.75);
+            background: rgba(20, 20, 25, 0.85);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(139, 92, 246, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.15);
             border-radius: 30px;
             padding: 40px 30px;
-            box-shadow: 0 8px 32px 0 rgba(139, 92, 246, 0.15);
+            box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.1);
             transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
             animation: slideIn 0.8s ease-out;
         }
@@ -91,8 +91,8 @@
 
         .card:hover {
             transform: translateY(-10px);
-            border-color: rgba(139, 92, 246, 0.4);
-            box-shadow: 0 15px 35px 0 rgba(139, 92, 246, 0.25);
+            border-color: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 15px 35px 0 rgba(255, 255, 255, 0.15);
         }
 
         /* Profile Image */
@@ -110,19 +110,19 @@
             justify-content: center;
             margin: 0 auto 20px;
             font-size: 60px;
-            box-shadow: 0 8px 25px rgba(139, 92, 246, 0.35);
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
             position: relative;
             animation: glow 3s ease-in-out infinite;
             object-fit: cover;
-            border: 3px solid rgba(139, 92, 246, 0.3);
+            border: 3px solid rgba(255, 255, 255, 0.2);
         }
 
         @keyframes glow {
             0%, 100% {
-                box-shadow: 0 8px 25px rgba(139, 92, 246, 0.35);
+                box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
             }
             50% {
-                box-shadow: 0 8px 35px rgba(139, 92, 246, 0.55);
+                box-shadow: 0 8px 35px rgba(255, 255, 255, 0.3);
             }
         }
 
@@ -149,7 +149,7 @@
         /* Divider */
         .divider {
             height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.2), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
             margin: 25px 0;
         }
 
@@ -200,8 +200,8 @@
             aspect-ratio: 1;
             border: none;
             border-radius: 20px;
-            background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.2));
-            border: 1.5px solid rgba(139, 92, 246, 0.3);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.15));
+            border: 1.5px solid rgba(255, 255, 255, 0.2);
             color: #ffffff;
             font-size: 22px;
             cursor: pointer;
@@ -212,6 +212,9 @@
             position: relative;
             overflow: hidden;
             text-decoration: none;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+            min-height: 60px;
         }
 
         .social-btn::before {
@@ -221,16 +224,16 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(139, 92, 246, 0.4), rgba(99, 102, 241, 0.4));
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.25));
             transition: left 0.4s ease;
             z-index: -1;
         }
 
         .social-btn:hover {
             transform: translateY(-8px) scale(1.05);
-            border-color: rgba(139, 92, 246, 0.6);
-            color: #8B5CF6;
-            box-shadow: 0 12px 30px rgba(139, 92, 246, 0.3);
+            border-color: rgba(255, 255, 255, 0.4);
+            color: #ffffff;
+            box-shadow: 0 12px 30px rgba(255, 255, 255, 0.2);
         }
 
         .social-btn:hover::before {
@@ -243,8 +246,8 @@
             padding: 16px 24px;
             border: none;
             border-radius: 20px;
-            background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
-            color: #ffffff;
+            background: linear-gradient(135deg, #ffffff 0%, #bdbdbd 100%);
+            color: #000000;
             font-size: 14px;
             font-weight: 600;
             cursor: pointer;
@@ -253,7 +256,13 @@
             letter-spacing: 1px;
             position: relative;
             overflow: hidden;
-            box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
+            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .cta-button::before {
@@ -263,14 +272,14 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, #8B5CF6 0%, #6366F1 100%);
+            background: linear-gradient(135deg, #bdbdbd 0%, #ffffff 100%);
             transition: left 0.4s ease;
             z-index: -1;
         }
 
         .cta-button:hover {
             transform: translateY(-4px);
-            box-shadow: 0 12px 35px rgba(139, 92, 246, 0.5);
+            box-shadow: 0 12px 35px rgba(255, 255, 255, 0.3);
         }
 
         .cta-button:hover::before {
@@ -290,13 +299,56 @@
         }
 
         .footer a {
-            color: #8B5CF6;
+            color: #ffffff;
             text-decoration: none;
             transition: color 0.3s ease;
         }
 
         .footer a:hover {
-            color: #a78bfa;
+            color: #e0e0e0;
+        }
+
+        /* Toast Notification */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            padding: 12px 24px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            animation: slideUp 0.3s ease-out, slideDown 0.3s ease-out 1.7s;
+            z-index: 1000;
+            font-size: 14px;
+            font-weight: 500;
+            text-align: center;
+            pointer-events: none;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateX(-50%) translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+            to {
+                opacity: 0;
+                transform: translateX(-50%) translateY(20px);
+            }
         }
 
         /* Responsive Design */
@@ -371,12 +423,6 @@
             <!-- Divider -->
             <div class="divider"></div>
 
-            <!-- bKash Section -->
-            <div class="bkash-section">
-                <span class="bkash-label">💳 bKash Mobile Money</span>
-                <div class="bkash-number">01719284739</div>
-            </div>
-
             <!-- Social Buttons -->
             <div class="social-buttons">
                 <a class="social-btn" href="https://wa.me/+8801719284739" title="WhatsApp" target="_blank" rel="noopener noreferrer">
@@ -394,7 +440,7 @@
                 <a class="social-btn" href="https://www.behance.net/shoiebdurjoy9" title="Behance Portfolio" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-behance"></i>
                 </a>
-                <a class="social-btn" href="mailto:shoiebdurjoy9@gmail.com" title="Email">
+                <a class="social-btn" href="https://mail.google.com/mail/?view=cm&fs=1&to=shoiebdurjoy9@gmail.com&su=Contact%20from%20QR%20Card" title="Email" target="_blank" rel="noopener noreferrer">
                     <i class="fas fa-envelope"></i>
                 </a>
                 <a class="social-btn" href="tel:01560039923" title="Call">
@@ -403,7 +449,7 @@
                 <a class="social-btn" href="https://github.com/shoiebdurjoy" title="GitHub" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-github"></i>
                 </a>
-                <a class="social-btn" href="https://www.linkedin.com/in/shoieb-durjoy-01a942234/" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+                <a class="social-btn" href="https://linkedin.com/in/shoieb-durjoy-01a942234" title="LinkedIn" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-linkedin"></i>
                 </a>
             </div>
@@ -411,9 +457,9 @@
             <!-- Divider -->
             <div class="divider"></div>
 
-            <!-- CTA Button -->
-            <button class="cta-button" onclick="copyToClipboard('01719284739')">
-                📋 Copy bKash Number
+            <!-- bKash Button -->
+            <button class="cta-button" onclick="copyBkash()">
+                💳 bKash
             </button>
 
             <!-- Footer -->
@@ -422,20 +468,23 @@
     </div>
 
     <script>
-        function copyToClipboard(text) {
-            navigator.clipboard.writeText(text).then(() => {
-                const btn = event.target;
-                const originalText = btn.textContent;
-                btn.textContent = '✓ Copied!';
-                btn.style.background = 'linear-gradient(135deg, #4CAF50 0%, #45a049 100%)';
-                
-                setTimeout(() => {
-                    btn.textContent = originalText;
-                    btn.style.background = '';
-                }, 2000);
+        function copyBkash() {
+            navigator.clipboard.writeText("01719284739").then(() => {
+                showToast("Copied to clipboard");
             }).catch(err => {
                 console.error('Failed to copy:', err);
             });
+        }
+
+        function showToast(message) {
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.textContent = message;
+            document.body.appendChild(toast);
+            
+            setTimeout(() => {
+                toast.remove();
+            }, 2000);
         }
 
         // Add ripple effect on button click
